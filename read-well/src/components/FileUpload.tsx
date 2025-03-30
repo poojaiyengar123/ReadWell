@@ -39,7 +39,11 @@ const FileUpload: React.FC = () => {
 
     return (
         <div className="file-upload">
-            <input type="file" onChange={handleFileChange} />
+            <input id="file-input" type="file" onChange={handleFileChange} style={{ display: "none" }}/>
+            <label htmlFor="file-input" className="file-input-label">Choose File</label>
+            <label>
+                {selectedFile ? "File selected" : "No file selected"}
+            </label>
             <button onClick={handleUpload} disabled={!selectedFile}>
             Upload File
             </button>
