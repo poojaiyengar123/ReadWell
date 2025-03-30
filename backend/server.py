@@ -1,11 +1,13 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import uuid
 import os
+from transcribe_image import image_to_text
 
 """
 @Author Arnav Dadarya
+@Author Pooja Raghuram
 """
 
 app = FastAPI()
@@ -42,3 +44,20 @@ async def get_image(image_id: str):
       return FileResponse(path=file_path, media_type="image/jpeg", filename=file_name)
 
   raise HTTPException(status_code=404, detail="Image not found")
+
+@app.post("/transcribe/")
+async def transcribe_image(file: UploadFile = File(...)):
+  image_id = str(uuid.uuid4())
+  file_ext = os.path.splitext(file.filename)[-1]
+  file_path = os.path.join(UPLOAD_DIR, f"{image_id}{file_ext}")
+
+  # Save the uploaded image
+  with open(file_path, "wb") as f:
+      f.write(await file.read())
+
+  # Call the transcribe_image function
+  try:
+      text = image_to_text(file_path)
+      return {"transcribed_text": text}
+  except Exception as e:
+      raise HTTPException(status_code=500, detail=f"Error during transcription: {str(e)}")
