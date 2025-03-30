@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
 const LandingPage: React.FC = () => {
+    const navigate = useNavigate();
     const goGallery = () => {
         navigate('/gallery');
     };
@@ -19,11 +20,13 @@ const LandingPage: React.FC = () => {
             <div className="description">
                 <p>ReadWell is an accessibility-focused app that converts images of text into a dyslexia-friendly format with customizable fonts. It also features text-to-speech to improve reading ease and comprehension.</p>
             </div>
-            <div className="button">
-                <button onClick={goCamera} className="camera-button">Transcribe Image</button>
-            </div>
-            <div className="button">
-                <button onClick={goGallery} className="gallery-button">View Image Gallery</button>
+            <div className="buttons">
+                <div className="button">
+                    <button onClick={goCamera} className="camera-button">Transcribe Image</button>
+                </div>
+                <div className="button">
+                    <button onClick={goGallery} className="gallery-button">View Image Gallery</button>
+                </div>
             </div>
         </div>
     );
