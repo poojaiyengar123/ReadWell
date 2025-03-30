@@ -21,22 +21,22 @@
 ### 1. Home Page
 Users have the option to transcribe an image or view the image gallery. 
 
-  ![Home Page](src/assets/home_page.png)
+  ![Home Page](read-well/src/assets/home_page.png)
 ### 2. Image Upload Page
 Users can upload an image for transcription in a simple and intuitive interface.
 
-  ![Image Upload Page](src/assets/image_upload_page.png)
-  ![Image Uploaded Page](src/assets/image_uploaded_page.png)
+  ![Image Upload Page](read-well/src/assets/image_upload_page.png)
+  ![Image Uploaded Page](read-well/src/assets/image_uploaded_page.png)
   
 ### 3. Transcription Display
 Once an image is uploaded, ReadWell displays the transcribed text in a dyslexia-friendly format. 
 
-  ![Transcription Display Page](src/assets/transcription_display_page.png)
+  ![Transcription Display Page](read-well/src/assets/transcription_display_page.png)
 
 ### 4. Image Gallery
 A dedicated section allows users to browse previously uploaded images and their transcriptions.
 
-  ![Image Gallery Page](src/assets/image_gallery_page.png)
+  ![Image Gallery Page](read-well/src/assets/image_gallery_page.png)
 
 ## Planned Improvements
 
