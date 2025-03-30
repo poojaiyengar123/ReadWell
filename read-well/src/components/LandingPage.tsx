@@ -18,7 +18,7 @@ const LandingPage: React.FC = () => {
                 <h1>ReadWell</h1>
             </div>
             <div className="description">
-                <p>ReadWell is an accessibility-focused app that converts images of text into a dyslexia-friendly format with customizable fonts. It also features text-to-speech to improve reading ease and comprehension.</p>
+                <p>ReadWell is an accessibility-focused app that converts images of text into a dyslexia-friendly format.</p>
             </div>
             <div className="buttons">
                 <div className="button">
