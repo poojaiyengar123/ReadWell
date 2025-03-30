@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from "/Users/poojaraghuram/Documents/VS Code/ReadWell/read-well/src/assets/readwell-logo.png";
+import logo from "../assets/readwell-logo.png";
 import './styles.css';
 
 const Header: React.FC = () => {

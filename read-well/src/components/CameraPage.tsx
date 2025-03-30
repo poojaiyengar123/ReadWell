@@ -1,5 +1,6 @@
 import React from 'react';
 // import { useNavigate } from 'react-router-dom';
+import FileUpload from "./FileUpload";
 import './styles.css';
 
 const CameraPage: React.FC = () => {
@@ -14,6 +15,7 @@ const CameraPage: React.FC = () => {
     return (
         <div className="homepage">
             <p>Camera Page</p>
+            <FileUpload />
         </div>
     );
 };
