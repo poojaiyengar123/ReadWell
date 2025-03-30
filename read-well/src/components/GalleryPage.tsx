@@ -27,33 +27,36 @@ const GalleryPage: React.FC = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="gallery">
-      <div className="gallery-area">
-        <div className="gallery_cards">
-          {images.length > 0 ? (
-            images.map((filename, index) => {
-              const imageUrl = `http://localhost:8000/image/${filename}`;
-              return (
-                <a
-                  key={index}
-                  href={imageUrl}
-                  download={filename} // Enables downloading
-                  className="download-link"
-                >
-                  <img
-                    src={imageUrl}
-                    alt={`Image ${index}`}
-                    className="images"
-                  />
-                </a>
-              );
-            })
-          ) : (
-            <p>No images available</p>
-          )}
+    <>
+      <h1 className="gallery-name">Image Gallery</h1>
+      <div className="gallery">
+        <div className="gallery-area">
+          <div className="gallery_cards">
+            {images.length > 0 ? (
+              images.map((filename, index) => {
+                const imageUrl = `http://localhost:8000/image/${filename}`;
+                return (
+                  <a
+                    key={index}
+                    href={imageUrl}
+                    download={filename} // Enables downloading
+                    className="download-link"
+                  >
+                    <img
+                      src={imageUrl}
+                      alt={`Image ${index}`}
+                      className="images"
+                    />
+                  </a>
+                );
+              })
+            ) : (
+              <p>No images available</p>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
