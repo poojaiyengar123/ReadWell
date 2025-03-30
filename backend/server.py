@@ -61,3 +61,11 @@ async def transcribe_image(file: UploadFile = File(...)):
       return {"transcribed_text": text}
   except Exception as e:
       raise HTTPException(status_code=500, detail=f"Error during transcription: {str(e)}")
+
+@app.get("/images")
+async def list_images():
+  try:
+    images = [file for file in os.listdir(UPLOAD_DIR) if file.endswith((".png", ".jpg", ".jpeg", ".gif"))]
+    return JSONResponse(content=images)
+  except Exception as e:
+    raise HTTPException(status_code=500, detail=str(e))
