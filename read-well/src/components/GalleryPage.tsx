@@ -9,6 +9,7 @@ const GalleryPage: React.FC = () => {
     fetch("http://localhost:8000/images")
       .then((response) => response.json())
       .then((json) => {
+          console.log("API Response:", json);
         if (Array.isArray(json)) {
           setImages(json);
         } else {
