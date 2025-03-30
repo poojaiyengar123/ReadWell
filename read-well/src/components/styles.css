@@ -1,99 +1,136 @@
 body {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
 }
 
 .homepage {
-    margin-top: -30px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
+  margin-top: -30px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
 }
 
 .file-upload {
-    text-align: center;
+  text-align: center;
 }
 
 .file-input-label {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-right: 2%
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-right: 2%;
 }
 
 label {
-    font-family: 'Lexend';
+  font-family: "Lexend";
 }
 
 .file-input-label:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
 }
 
 .logo {
-    height: 150px;
+  height: 150px;
 }
 
 h1 {
-    font-family: 'Lexend';
+  font-family: "Lexend";
 }
 
 .title {
-    font-size: 23px;
-    font-weight: 400;
-    padding-right: 20px;
+  font-size: 23px;
+  font-weight: 400;
+  padding-right: 20px;
 }
 
 .description {
-    font-size: 30px;
-    font-family: 'Lexend';
-    margin-top: 3%;
-    margin-left: 20%;
-    margin-right: 20%;
+  font-size: 30px;
+  font-family: "Lexend";
+  margin-top: 3%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .button {
-    font-family: 'Lexend';
-    font-size: 16px;
-    margin-top: 10px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 1);
-    border-radius: 10px;
-    border: none;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 1%;
+  font-family: "Lexend";
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  border: none;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
 }
 p {
-    font-family: 'Lexend';
+  font-family: "Lexend";
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    transform: scale(1.5, 1.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transform: scale(1.5, 1.5);
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-top: 200px;
+}
+
+.gallery-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1200px; /* Adjust the width as needed */
+}
+
+.gallery_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.images {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+.images:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
