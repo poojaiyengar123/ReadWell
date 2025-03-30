@@ -4,6 +4,7 @@ const FileUpload: React.FC = () => {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [uploadedImage, setUploadedImage] = useState<string | null>(null);
     const [transcribedText, setTranscribedText] = useState<string | null>(null);
+    const [audioId, setAudioId] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +32,7 @@ const FileUpload: React.FC = () => {
             if (response.ok) {
                 const imageUrl = `http://localhost:8000/image/${data.image_id}`;
                 setUploadedImage(imageUrl);
+                setAudioId(data.image_id);
             } else {
                 alert("Upload failed: " + data.detail);
             }
@@ -59,6 +61,7 @@ const FileUpload: React.FC = () => {
             const data = await response.json();
             if (response.ok) {
               setTranscribedText(data.transcribed_text);
+              setAudioId(data.audio_url);
             } else {
               alert("Error during transcription: " + data.detail);
             }
@@ -95,6 +98,12 @@ const FileUpload: React.FC = () => {
                 <div>
                     <p>Transcribed Text:</p>
                     <p>{transcribedText}</p>
+                    {audioId && (
+                        <audio controls>
+                            <source src={audioId} type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    )}
                 </div>
             )}
         </div>
