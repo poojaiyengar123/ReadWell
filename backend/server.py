@@ -8,6 +8,7 @@ from transcribe_image import image_to_text
 """
 @Author Arnav Dadarya
 @Author Pooja Raghuram
+@Author Naveena Pillai
 """
 
 app = FastAPI()
