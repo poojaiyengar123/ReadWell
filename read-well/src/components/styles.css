@@ -17,6 +17,10 @@ body {
     align-items: center;
 }
 
+.file-upload {
+    text-align: center;
+}
+
 .header {
     position: fixed;
     top: 0;

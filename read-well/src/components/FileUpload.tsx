@@ -20,16 +20,17 @@ const FileUpload: React.FC = () => {
         formData.append("file", selectedFile);
 
         try {
-            const response = await fetch("http://localhost:5001/upload", {
+            const response = await fetch("http://localhost:8000/upload", {
               method: "POST",
               body: formData,
             });
       
             const data = await response.json();
             if (response.ok) {
-              setUploadedImage(`http://localhost:5001${data.filePath}`);
+                const imageUrl = `http://localhost:8000/image/${data.image_id}`;
+                setUploadedImage(imageUrl);
             } else {
-              alert("Upload failed: " + data.error);
+                alert("Upload failed: " + data.detail);
             }
           } catch (error) {
             console.error("Upload error:", error);
@@ -37,7 +38,7 @@ const FileUpload: React.FC = () => {
     };
 
     return (
-        <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <div className="file-upload">
             <input type="file" onChange={handleFileChange} />
             <button onClick={handleUpload} disabled={!selectedFile}>
             Upload File

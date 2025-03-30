@@ -14,7 +14,6 @@ const CameraPage: React.FC = () => {
 
     return (
         <div className="homepage">
-            <p>Camera Page</p>
             <FileUpload />
         </div>
     );
