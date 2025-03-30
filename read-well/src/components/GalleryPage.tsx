@@ -9,7 +9,7 @@ const GalleryPage: React.FC = () => {
     fetch("http://localhost:8000/images")
       .then((response) => response.json())
       .then((json) => {
-          console.log("API Response:", json);
+        console.log("API Response:", json);
         if (Array.isArray(json)) {
           setImages(json);
         } else {
@@ -40,7 +40,7 @@ const GalleryPage: React.FC = () => {
                   <a
                     key={index}
                     href={imageUrl}
-                    download={filename} // Enables downloading
+                    download={filename}
                     className="download-link"
                   >
                     <img

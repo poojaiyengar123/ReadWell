@@ -11,8 +11,8 @@ body {
 }
 
 .transcribe-image {
-    margin-top: 5%;
-    justify-content: center;
+  margin-top: 5%;
+  justify-content: center;
 }
 
 .homepage {
@@ -27,20 +27,20 @@ body {
 }
 
 .file-input-label {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-right: 2%;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-right: 2%;
 }
 
 label {
-    font-family: 'Lexend';
-    margin-right: 2%;
+  font-family: "Lexend";
+  margin-right: 2%;
 }
 
 .file-input-label:hover {
@@ -91,12 +91,8 @@ h1 {
 }
 
 p {
-<<<<<<< HEAD
-    font-family: 'Lexend';
-    font-size: 30px;
-=======
   font-family: "Lexend";
->>>>>>> e3380de8a2c8bf91b484da02a61d0d2985ddff8c
+  font-size: 30px;
 }
 
 .buttons {
